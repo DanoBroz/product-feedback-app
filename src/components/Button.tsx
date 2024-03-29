@@ -23,6 +23,7 @@ export const Button = (props: ButtonProps) => {
                 isBackButton &&
                     'bg-transparent p-0 text-Blue-neutral hover:underline hover:opacity-100',
             )}
+            sx={{ textTransform: 'none' }}
             {...restProps}
         >
             {isBackButton && <img src={BackIconSrc} alt="back" />}
