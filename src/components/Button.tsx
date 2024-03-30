@@ -16,12 +16,12 @@ export const Button = (props: ButtonProps) => {
     return (
         <MuiButton
             type='button'
-            variant='contained'
+            variant={isBackButton ? 'text' : 'contained'}
             color={type}
             className={twMerge(
                 'flex items-center gap-4 rounded-[10px] px-6 py-3 text-sm font-bold capitalize transition-opacity hover:opacity-80',
                 isBackButton &&
-                    'bg-transparent p-0 text-Blue-neutral hover:underline hover:opacity-100',
+                    'bg-transparent text-Blue-neutral hover:underline hover:opacity-100 shadow-none hover:bg-transparent',
             )}
             sx={{ textTransform: 'none' }}
             {...restProps}
