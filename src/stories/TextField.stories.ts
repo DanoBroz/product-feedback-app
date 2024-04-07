@@ -1,24 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { fn } from '@storybook/test'
-import { Button } from '../components'
+import { TextField } from "../components"
 
 const meta = {
-    title: 'CommonComponents/Button',
-    component: Button,
+    title: 'CommonComponents/TextField',
+    component: TextField,
     parameters: {
         layout: 'centered',
     },
     tags: ['autodocs'],
-    args: { onClick: fn() },
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof TextField>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const Default: Story = {
     args: {
-        type: 'primary',
-        label: 'Button',
     },
 }
 
